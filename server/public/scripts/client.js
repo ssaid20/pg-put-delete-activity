@@ -16,7 +16,13 @@ function handleSubmit() {
   let book = {};
   book.author = $('#author').val();
   book.title = $('#title').val();
+  //validation
+  if (book.author === '' || book.title === '') {
+    alert('Both title and author are required!');
+    return; // stops the function if the fields are not filled
+  }
   addBook(book);
+  
 }
 
 // adds a book to the database
