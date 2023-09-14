@@ -40,18 +40,18 @@ router.post('/',  (req, res) => {
 // Request body must include the content to update - the status
 router.put("/:id", (req, res) => {
   const id = req.params.id;
-  console.log(`PUT route in /books/ with id of`, id);
+  const isRead = req.body.isRead;
+  
+  const queryText = `UPDATE "books" SET "isRead" = $1 WHERE "id" = $2;`;
 
-  let queryText = `UPDATE "books" SET "isRead" = NOT "isRead" WHERE "id" = $1;`;
-
-  pool
-    .query(queryText, [id])
-    .then(() => res.sendStatus(204)) //204 no content
+  pool.query(queryText, [isRead, id])
+    .then(() => res.sendStatus(204))
     .catch((err) => {
       console.log("Error in UPDATing books table", err);
       res.sendStatus(500);
     });
 });
+
 
 
 // TODO - DELETE 
