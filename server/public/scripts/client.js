@@ -99,6 +99,5 @@ function handleMarkAsRead() {
     refreshBooks();
   }).catch(function(error) {
     console.log('Error in PUT', error);
-    alert('Unable to update book at this time. Please try again later.');
   });
 }

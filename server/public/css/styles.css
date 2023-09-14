@@ -1,31 +1,55 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background-color: #f0f0f0;
 }
-
 header {
-  background-color: brown;
-  padding: 1em;
-  margin-bottom: 1em;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
 }
-
-h1 {
-  margin: 0;
-}
-
 main {
-  width: 90%;
-  margin: auto;
+  padding: 20px;
 }
 
-section {
-  background-color: linen;
-  padding: .5em;
-  margin-bottom: 1em;
+label {
+  display: block;
+  margin: 10px 0 5px;
 }
 
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
 th {
-  text-align: left;
+  background-color: #333;
+  color: white;
+}
+tr:hover {
+  background-color: #ddd;
+}
+button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
 }
 
 

@@ -47,12 +47,10 @@ router.put("/:id", (req, res) => {
   pool.query(queryText, [isRead, id])
     .then(() => res.sendStatus(204))
     .catch((err) => {
-      console.log("Error in UPDATing books table", err);
+      console.log("Error in UPDATING books table", err);
       res.sendStatus(500);
     });
 });
-
-
 
 // TODO - DELETE 
 // Removes a book to show that it has been read
@@ -66,7 +64,7 @@ router.delete("/:id", (req, res) => {
     .query(queryText, [id])
     .then(() => res.sendStatus(204)) //204 no content
     .catch((err) => {
-      console.log("Error in DELETing from books table", err);
+      console.log("Error in DELETING from books table", err);
       res.sendStatus(500);
     });
 });
